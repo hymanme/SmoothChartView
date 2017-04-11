@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.hymane.smoothchart.SmoothLineChartView
+        android:id="@+id/smoothChartView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="64dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最小：" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="49" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最大：" />
+
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="55" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_show_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="绘制投影区域" />
+
+    <CheckBox
+        android:id="@+id/cb_show_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="显示高亮标签" />
+
+    <RadioGroup
+        android:id="@+id/rg_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_rg_style_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="环节点" />
+
+        <RadioButton
+            android:id="@+id/rb_rg_style_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圆节点" />
+
+    </RadioGroup>
+</LinearLayout>
